@@ -1,0 +1,24 @@
+[16-Sep-2012 18:56:35] PHP Warning:  require(templates/Template.class.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/ecosolor/public_html/BuscaEcosoli/includes.php on line 3
+[16-Sep-2012 18:56:35] PHP Warning:  require(templates/Template.class.php) [<a href='function.require'>function.require</a>]: failed to open stream: No such file or directory in /home/ecosolor/public_html/BuscaEcosoli/includes.php on line 3
+[16-Sep-2012 18:56:35] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'templates/Template.class.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/ecosolor/public_html/BuscaEcosoli/includes.php on line 3
+[16-Sep-2012 18:56:56] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'arquivo templates/tituloemlinha_2.html não existe' in /home/ecosolor/public_html/BuscaEcosoli/templates/Template.class.php:164
+Stack trace:
+#0 /home/ecosolor/public_html/BuscaEcosoli/templates/Template.class.php(93): Template->loadfile('.', 'templates/titul...')
+#1 /home/ecosolor/public_html/BuscaEcosoli/index.php(18): Template->__construct('templates/titul...')
+#2 {main}
+  thrown in /home/ecosolor/public_html/BuscaEcosoli/templates/Template.class.php on line 164
+[16-Sep-2012 18:57:12] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/ecosolor/public_html/BuscaEcosoli/classes/banco.php on line 10
+[16-Sep-2012 18:57:31] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/ecosolor/public_html/BuscaEcosoli/classes/banco.php on line 10
+[16-Sep-2012 18:57:35] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/ecosolor/public_html/BuscaEcosoli/classes/banco.php on line 10
+[05-Nov-2013 23:20:15 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[08-Nov-2013 23:12:25 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[11-Nov-2013 22:20:32 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: YES) in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[10-Feb-2014 04:07:26 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[09-Mar-2014 10:05:45 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[13-Mar-2014 17:00:19 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[24-Mar-2014 11:22:02 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[26-Mar-2014 02:52:28 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[27-Mar-2014 22:35:48 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[27-Mar-2014 23:09:03 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[28-Mar-2014 02:14:34 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/ecosoli/public_html/busca/classes/banco.php on line 10
+[28-Mar-2014 08:51:45 America/Sao_Paulo] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Too many connections in /home/ecosoli/public_html/busca/classes/banco.php on line 10
