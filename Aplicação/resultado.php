@@ -5,7 +5,7 @@ include "includes.php";
 $tpl = new Template("templates/chamadas.html");
 
 include "cabecalho.html";
-include "controle/conexao.php";
+
 
 $filtro_produto=$_POST["filtro_produto"];
 
@@ -70,9 +70,21 @@ $tpl4->show();
 $tpl = new Template("templates/lista2.html");
 $tpl->block("BLOCK_TABELA_CHEIA");
 
-$tpl->CABECALHO_COLUNA_COLSPAN = "5";
+$tpl->CABECALHO_COLUNA_COLSPAN = "2";
 $tpl->CABECALHO_COLUNA_TAMANHO = "";
 $tpl->CABECALHO_COLUNA_NOME = "PRODUTO";
+$tpl->block("BLOCK_CABECALHO_COLUNA");
+$tpl->CABECALHO_COLUNA_COLSPAN = "";
+$tpl->CABECALHO_COLUNA_TAMANHO = "";
+$tpl->CABECALHO_COLUNA_NOME = "MARCA";
+$tpl->block("BLOCK_CABECALHO_COLUNA");
+$tpl->CABECALHO_COLUNA_COLSPAN = "";
+$tpl->CABECALHO_COLUNA_TAMANHO = "";
+$tpl->CABECALHO_COLUNA_NOME = "RECIPIENTE";
+$tpl->block("BLOCK_CABECALHO_COLUNA");
+$tpl->CABECALHO_COLUNA_COLSPAN = "";
+$tpl->CABECALHO_COLUNA_TAMANHO = "";
+$tpl->CABECALHO_COLUNA_NOME = "VOLUME";
 $tpl->block("BLOCK_CABECALHO_COLUNA");
 $tpl->CABECALHO_COLUNA_COLSPAN = "2";
 $tpl->CABECALHO_COLUNA_TAMANHO = "";
@@ -80,7 +92,7 @@ $tpl->CABECALHO_COLUNA_NOME = "QUANTIDADE";
 $tpl->block("BLOCK_CABECALHO_COLUNA");
 $tpl->CABECALHO_COLUNA_COLSPAN = "";
 $tpl->CABECALHO_COLUNA_TAMANHO = "";
-$tpl->CABECALHO_COLUNA_NOME = "VALOR UNITÁRIO MÉDIO";
+$tpl->CABECALHO_COLUNA_NOME = "VALOR UNIT. MÉDIO";
 $tpl->block("BLOCK_CABECALHO_COLUNA");
 $tpl->CABECALHO_COLUNA_COLSPAN = "2";
 $tpl->CABECALHO_COLUNA_TAMANHO = "";
@@ -101,7 +113,7 @@ $sqlfil = "";
 for ($i=1;$i<=$banco_qtd;$i++) {
     //(SELECT max(sai_datacadastro) FROM $banco_nome[$i].saidas JOIN $banco_nome[$i].saidas_produtos on sai_codigo=saipro_saida WHERE sai_quiosque=etq_quiosque and saipro_produto=pro_codigo) as ultima_venda
     $sqlfil.="
-    SELECT pro_nome, SUM(etq_quantidade) as qtd , protip_sigla, AVG( etq_valorunitario ) valuni, pro_codigo,pro_tipocontagem,qui_nome,pro_marca,pro_volume, prorec_nome
+    SELECT pro_nome, SUM(etq_quantidade) as qtd , protip_sigla, AVG( etq_valorunitario ) valuni, pro_codigo,pro_tipocontagem,qui_nome,pro_marca,pro_volume, prorec_nome,qui_codigo,($i) as conex
     FROM $banco_nome[$i].produtos
     join $banco_nome[$i].estoque on (etq_produto=pro_codigo)
     left join $banco_nome[$i].produtos_recipientes on (pro_recipiente=prorec_codigo)
@@ -153,6 +165,8 @@ while ($dados=mysql_fetch_assoc($query)) {
     $marca = $dados["pro_marca"];
     $volume = $dados["pro_volume"];
     $recipiente = $dados["prorec_nome"];
+    $quiosque_codigo = $dados["qui_codigo"];
+    $conex = $dados["conex"];
 
     //Produto 
     //Código
@@ -225,7 +239,7 @@ while ($dados=mysql_fetch_assoc($query)) {
     $tpl->block("BLOCK_CONTEUDO");
     $tpl->block("BLOCK_COLUNA");
     $tpl->COLUNA_ALINHAMENTO = "left";
-    $tpl->CONTEUDO_LINK_ARQUIVO = "quiosque.php?produto=$produto_codigo";
+    $tpl->CONTEUDO_LINK_ARQUIVO = "quiosque.php?quiosque=$quiosque_codigo&i=$conex";
     $tpl->block("BLOCK_CONTEUDO_LINK");
     $tpl->ICONE_TAMANHO = "15px";
     $tpl->ICONE_NOMEARQUIVO = "procurar.png";

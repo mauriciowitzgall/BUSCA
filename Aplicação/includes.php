@@ -10,6 +10,7 @@ include "classes/paginacao.php";
 
 
 include "controle/bancos.php";
+include "controle/conexao.php";
 
 //Cabeçalho e estrutura html inicial da estrutura da pagina
 include "templates/topo.html";

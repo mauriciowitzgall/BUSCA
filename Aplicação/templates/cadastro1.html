@@ -18,6 +18,11 @@
 </style>
 <link rel="stylesheet" type="text/css" href="templates/templates.css" />
 
+<!-- BEGIN BLOCK_QUEBRA -->
+<br>
+<!-- END BLOCK_QUEBRA -->
+
+
 <!-- BEGIN BLOCK_FORM -->
 <form action="{FORM_LINK}" target="{FORM_TARGET}" method="post" name="{FORM_NOME}">   
 <!-- END BLOCK_FORM -->    
@@ -46,117 +51,121 @@
 
                 <!-- BEGIN BLOCK_COLUNA_LINK --> 
                 <a 
-                    href="{COLUNA_LINK_ARQUIVO}" 
-                    class="
-                    <!-- BEGIN BLOCK_COLUNA_LINK_PADRAO --> 
-                    link
-                    <!-- END BLOCK_COLUNA_LINK_PADRAO -->
-                    {COLUNA_LINK_CLASSE}
+                href="{COLUNA_LINK_ARQUIVO}" 
+                class="
+                <!-- BEGIN BLOCK_COLUNA_LINK_PADRAO --> 
+                link
+                <!-- END BLOCK_COLUNA_LINK_PADRAO -->
+                {COLUNA_LINK_CLASSE}
+                " 
+                target="{COLUNA_LINK_TARGET}"
+                >
+                <!-- END BLOCK_COLUNA_LINK -->  
+
+
+                <!-- BEGIN BLOCK_TITULO -->             
+                <span class="titulo">{TITULO}:</span>                        
+                <!-- END BLOCK_TITULO -->  
+
+
+                <!-- BEGIN BLOCK_CAMPO --> 
+                <input
+                    type="{CAMPO_TIPO}" 
+                    name="{CAMPO_NOME}" 
+                    id="{CAMPO_ID}" 
+                    size="{CAMPO_TAMANHO}"
+                    value="{CAMPO_VALOR}"
+                    maxlength="{CAMPO_QTDCARACTERES}"                
+                    onkeyup="{CAMPO_ONKEYUP}"
+                    onkeydown="{CAMPO_ONKEYDOWN}"
+                    onclick="
+                    <!-- BEGIN BLOCK_CAMPO_AUTOSELECIONAR -->
+                    this.select()    
+                    <!-- END BLOCK_CAMPO_AUTOSELECIONAR -->
+                    {CAMPO_AOCLICAR}
                     " 
-                    target="{COLUNA_LINK_TARGET}"
+                    placeholder="{CAMPO_DICA}" 
+
+                    <!-- BEGIN BLOCK_CAMPO_HISTORICODESATIVADO -->
+                    autocomplete="off"
+                    <!-- END BLOCK_CAMPO_HISTORICODESATIVADO -->
+
+                    <!-- BEGIN BLOCK_CAMPO_AUTOFOCO -->
+                    autofocus
+                    <!-- END BLOCK_CAMPO_AUTOFOCO -->
+
+                    <!-- BEGIN BLOCK_CAMPO_DESABILITADO -->
+                    disabled                 
+                    <!-- END BLOCK_CAMPO_DESABILITADO -->
+
+                    <!-- BEGIN BLOCK_CAMPO_MARCADO -->
+                    checked 
+                    <!-- END BLOCK_CAMPO_MARCADO -->   
+
+                    <!-- BEGIN BLOCK_CAMPO_OBRIGATORIO -->
+                    required                 
+                    <!-- END BLOCK_CAMPO_OBRIGATORIO -->
+
+                    <!-- BEGIN BLOCK_CAMPO_PADRAO -->
+                    class=" campopadrao {CAMPO_CLASSE}" 
+                    <!-- END BLOCK_CAMPO_PADRAO -->                
+
+                    <!-- BEGIN BLOCK_CAMPO_ESTILO -->
+                    style="{CAMPO_ESTILO}" 
+                    <!-- END BLOCK_CAMPO_ESTILO -->                
+
+                    <!-- BEGIN BLOCK_CAMPO_DINAMICO -->
+                    class=" {CAMPO_CLASSE} " 
+                    <!-- END BLOCK_CAMPO_DINAMICO -->   
                     >
-                    <!-- END BLOCK_COLUNA_LINK -->  
+                    <!-- END BLOCK_CAMPO --> 
 
 
-                    <!-- BEGIN BLOCK_TITULO -->             
-                    <span class="titulo">{TITULO}:</span>                        
-                    <!-- END BLOCK_TITULO -->  
+                    <!-- BEGIN BLOCK_SELECT --> 
+                    <select
+                    name="{SELECT_NOME}"
+                    id="{SELECT_ID}"
+                    size="{SELECT_TAMANHO}"                 
+                    onchange="{SELECT_AOTROCAR}" 
+                    onclick="{SELECT_AOCLICAR}" 
 
 
-                    <!-- BEGIN BLOCK_CAMPO --> 
-                    <input
-                        type="{CAMPO_TIPO}" 
-                        name="{CAMPO_NOME}" 
-                        id="{CAMPO_ID}" 
-                        size="{CAMPO_TAMANHO}"
-                        value="{CAMPO_VALOR}"
-                        maxlength="{CAMPO_QTDCARACTERES}"                
-                        onkeyup="{CAMPO_ONKEYUP}"
-                        onkeydown="{CAMPO_ONKEYDOWN}"
-                        onclick="
-                        <!-- BEGIN BLOCK_CAMPO_AUTOSELECIONAR -->
-                        this.select()    
-                        <!-- END BLOCK_CAMPO_AUTOSELECIONAR -->
-                        {CAMPO_AOCLICAR}
-                        " 
-                        placeholder="{CAMPO_DICA}" 
+                    <!-- BEGIN BLOCK_SELECT_AUTOFOCO -->
+                    autofocus
+                    <!-- END BLOCK_SELECT_AUTOFOCO -->
 
-                        <!-- BEGIN BLOCK_CAMPO_HISTORICODESATIVADO -->
-                        autocomplete="off"
-                        <!-- END BLOCK_CAMPO_HISTORICODESATIVADO -->
+                    <!-- BEGIN BLOCK_SELECT_DESABILITADO -->
+                    disabled                 
+                    <!-- END BLOCK_SELECT_DESABILITADO -->
 
-                        <!-- BEGIN BLOCK_CAMPO_AUTOFOCO -->
-                        autofocus
-                        <!-- END BLOCK_CAMPO_AUTOFOCO -->
+                    <!-- BEGIN BLOCK_SELECT_OBRIGATORIO -->
+                    required                 
+                    <!-- END BLOCK_SELECT_OBRIGATORIO -->
 
-                        <!-- BEGIN BLOCK_CAMPO_DESABILITADO -->
-                        disabled                 
-                        <!-- END BLOCK_CAMPO_DESABILITADO -->
+                    <!-- BEGIN BLOCK_SELECT_PADRAO -->
+                    class="campopadrao {SELECT_CLASSE} " 
+                    <!-- END BLOCK_SELECT_PADRAO -->                
 
-                        <!-- BEGIN BLOCK_CAMPO_MARCADO -->
-                        checked 
-                        <!-- END BLOCK_CAMPO_MARCADO -->   
+                    <!-- BEGIN BLOCK_SELECT_DINAMICO -->
+                    class=" {SELECT_CLASSE} " 
+                    <!-- END BLOCK_SELECT_DINAMICO -->                   
+                    >           
+                    <!-- BEGIN BLOCK_OPTION_PADRAO --> 
+                    <option value="">Selecione</option>
+                    <!-- END BLOCK_OPTION_PADRAO --> 
+                    >           
+                    <!-- BEGIN BLOCK_OPTION_TODOS --> 
+                    <option value="">Todos</option>
+                    <!-- END BLOCK_OPTION_TODOS --> 
 
-                        <!-- BEGIN BLOCK_CAMPO_OBRIGATORIO -->
-                        required                 
-                        <!-- END BLOCK_CAMPO_OBRIGATORIO -->
-
-                        <!-- BEGIN BLOCK_CAMPO_PADRAO -->
-                        class=" campopadrao {CAMPO_CLASSE}" 
-                        <!-- END BLOCK_CAMPO_PADRAO -->                
-
-                        <!-- BEGIN BLOCK_CAMPO_DINAMICO -->
-                        class=" {CAMPO_CLASSE} " 
-                        <!-- END BLOCK_CAMPO_DINAMICO -->   
+                    <!-- BEGIN BLOCK_OPTION --> 
+                    <option 
+                        value="{OPTION_VALOR}" 
+                        <!-- BEGIN BLOCK_OPTION_SELECIONADO -->
+                        selected
+                        <!-- END BLOCK_OPTION_SELECIONADO -->
                         >
-                        <!-- END BLOCK_CAMPO --> 
-
-
-                        <!-- BEGIN BLOCK_SELECT --> 
-                        <select
-                        name="{SELECT_NOME}"
-                        id="{SELECT_ID}"
-                        size="{SELECT_TAMANHO}"                 
-                        onchange="{SELECT_AOTROCAR}" 
-                        onclick="{SELECT_AOCLICAR}" 
-
-
-                        <!-- BEGIN BLOCK_SELECT_AUTOFOCO -->
-                        autofocus
-                        <!-- END BLOCK_SELECT_AUTOFOCO -->
-
-                        <!-- BEGIN BLOCK_SELECT_DESABILITADO -->
-                        disabled                 
-                        <!-- END BLOCK_SELECT_DESABILITADO -->
-
-                        <!-- BEGIN BLOCK_SELECT_OBRIGATORIO -->
-                        required                 
-                        <!-- END BLOCK_SELECT_OBRIGATORIO -->
-
-                        <!-- BEGIN BLOCK_SELECT_PADRAO -->
-                        class="campopadrao {SELECT_CLASSE} " 
-                        <!-- END BLOCK_SELECT_PADRAO -->                
-
-                        <!-- BEGIN BLOCK_SELECT_DINAMICO -->
-                        class=" {SELECT_CLASSE} " 
-                        <!-- END BLOCK_SELECT_DINAMICO -->                   
-                        >           
-                        <!-- BEGIN BLOCK_OPTION_PADRAO --> 
-                        <option value="">Selecione</option>
-                        <!-- END BLOCK_OPTION_PADRAO --> 
-                        >           
-                        <!-- BEGIN BLOCK_OPTION_TODOS --> 
-                        <option value="">Todos</option>
-                        <!-- END BLOCK_OPTION_TODOS --> 
-
-                        <!-- BEGIN BLOCK_OPTION --> 
-                        <option 
-                            value="{OPTION_VALOR}" 
-                            <!-- BEGIN BLOCK_OPTION_SELECIONADO -->
-                            selected
-                            <!-- END BLOCK_OPTION_SELECIONADO -->
-                            >
-                            {OPTION_TEXTO}
+                        {OPTION_TEXTO}
                     </option> 
                     <!-- END BLOCK_OPTION --> 
                 </select>
@@ -226,6 +235,7 @@
                     name="{TEXTO_NOME}"
                     id="{TEXTO_ID}"
                     class="{TEXTO_CLASSE}"
+                    style="{TEXTO_ESTILO}"
                     >{TEXTO_VALOR}    
                 </span>            
                 <!-- END BLOCK_TEXTO --> 
