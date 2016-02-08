@@ -2,12 +2,12 @@
 
 class banco {
 
-    private $host = "localhost";
-    private $user = "root";
-    private $pass = "";
+    //private $host = "localhost";
+    //private $user = "root";
+    //private $pass = "";
 
     function conectar() {
-        $con = mysql_connect($this->host, $this->user, $this->pass) or die($this->erro(mysql_error()));
+        $con = mysql_connect($host, $user, $pass) or die($this->erro(mysql_error()));
         return $con;
     }
 
@@ -15,7 +15,7 @@ class banco {
         mysql_close();
     }
 
-    function selecionarDB($banco) {
+    function selecionar($banco) {
         $sel = mysql_select_db($banco) or die($this->erro(mysql_error()));
         if ($sel) {
             return true;
