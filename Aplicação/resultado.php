@@ -103,7 +103,6 @@ $tpl->block("BLOCK_CABECALHO_COLUNA");
 $tpl->block("BLOCK_CABECALHO_LINHA");
 $tpl->block("BLOCK_CABECALHO");
 
-
 //Listagem
 
 if ($filtro_produto!="") {

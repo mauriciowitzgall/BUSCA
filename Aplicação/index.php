@@ -18,14 +18,24 @@ $tpl->show();
 $tpl = new Template("templates/tituloemlinha_2.html");
 $tpl->block("BLOCK_QUEBRA1");
 $tpl->block("BLOCK_CENTRALIZAR");
-$tpl->LISTA_TITULO = "PORTAL DE BUSCA DE PRODUTOS DA ECONOMIA SOLIDARIA";
+$tpl->LISTA_TITULO = "PORTAL DE BUSCA DE PRODUTOS DA AGRICULTURA FAMILIAR";
 $tpl->block("BLOCK_TITULO");
 $tpl->block("BLOCK_QUEBRA2");
 $tpl->show();
 
 
+//Título do campo de busca
+$tpl = new Template("templates/titulosimples.html");
+$tpl->block("BLOCK_CENTRALIZAR");
+$tpl->LISTA_TITULO="O que está procurando?";
+$tpl->block("BLOCK_QUEBRA1");
+$tpl->block("BLOCK_TITULO");
+//$tpl->block("BLOCK_QUEBRA2");
+$tpl->show();
+
 //Campo para pesquisa de produto
 $tpl = new Template("templates/cadastro1.html");
+
 $tpl->FORM_NOME = "";
 $tpl->FORM_TARGET = "";
 $tpl->FORM_LINK = "resultado.php";
@@ -36,7 +46,9 @@ $tpl->CAMPO_TIPO = "text";
 $tpl->CAMPO_NOME = "filtro_produto";
 $tpl->CAMPO_VALOR = "";
 $tpl->CAMPO_TAMANHO = "50";
-$tpl->CAMPO_DICA = "";
+$tpl->CAMPO_DICA = "Ex: queijo, salame, chopp, frango caipira, ...";
+$tpl->CAMPO_ESTILO = "height:30px;";
+$tpl->block("BLOCK_CAMPO_ESTILO");
 $tpl->block("BLOCK_CAMPO_OBRIGATORIO");
 $tpl->block("BLOCK_CAMPO_PADRAO");
 $tpl->block("BLOCK_CAMPO_AUTOFOCO");
@@ -47,7 +59,7 @@ $tpl->block("BLOCK_LINHA");
 //$tpl->block("BLOCK_FECHARFORM");
 $tpl->show();
 
-
+echo "<br>";
 $tpl2 = new Template("templates/botoes1.html");
 //$tpl2->COLUNA_TAMANHO = "";
 $tpl2->COLUNA_ALINHAMENTO = "center";
@@ -72,7 +84,7 @@ $tpl2->block("BLOCK_FECHARFORM");
 $tpl2->show();
 
 $tpl = new Template("templates/linha_horizontal.html");
-$tpl->block("BLOCK_HR");
+//$tpl->block("BLOCK_HR");
 $tpl->show();
  
 include "rodape_ecosolitec.php";
